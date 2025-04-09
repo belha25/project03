@@ -1,0 +1,45 @@
+{
+    "quiz1":[
+        {
+            "Question":1,
+            "text": "How do you print in java?",
+            "correctAnswer":"System.out.println",
+            "wrong1": "bla",
+            "wrong2":"bla",
+            "wrong3":"bla"
+
+        },
+        {
+            "Question":2,
+            "text": "Sally wants to code a program that takes in user ids, and then puts them into a line. The first person to join should be the first person out. What java data structure is best used here?",
+            "correctAnswer":"queue",
+            "wrong1": "bla",
+            "wrong2":"bla",
+            "wrong3":"bla"  
+        },
+        {
+            "Question":3,
+            "text": "Which image correctly shows how to iterate over an array?",
+            "correctAnswer":"System.out.println",
+            "wrong1": "bla",
+            "wrong2":"bla",
+            "wrong3":"bla"
+        },
+        {
+            "Question":4,
+            "text": "Which data structure is useful to for collections of fixed lengths?",
+            "correctAnswer":"System.out.println",
+            "wrong1": "bla",
+            "wrong2":"bla",
+            "wrong3":"bla"
+        },
+        {
+            "Question":5,
+            "text": "Which image shows the correct way to reverse a string?",
+            "correctAnswer":"System.out.println",
+            "wrong1": "bla",
+            "wrong2":"bla",
+            "wrong3":"bla"
+        }
+    ]
+}
