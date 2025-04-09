@@ -3,38 +3,43 @@
         {
             "Question":1,
             "text": "What is the <p> element used for?",
-            "correctAnswer":"System.out.println",
-            "wrong1": "bla",
-            "wrong2":"bla",
-            "wrong3":"bla"
+            "type":"text",
+            "correctAnswer":"Creating paragraph elements in HTML",
+            "wrong1": "JavaScript Functions",
+            "wrong2":"Printing to the console",
+            "wrong3":"Storing data about polar bears"
 
         },
         {
             "Question":2,
             "text": "Jennifer wants to create a website where she can create a list, remove items, and use colors to display the category the items are in. What languages will she need?",
-            "correctAnswer":"queue",
-            "wrong1": "bla",
-            "wrong2":"bla",
-            "wrong3":"bla"  
+            "type":"narrative",
+            "correctAnswer":"HTML, CSS, and JavaScript",
+            "wrong1": "C#",
+            "wrong2":"SQL",
+            "wrong3":"Python"  
         },
         {
             "Question":3,
-            "text": "Which image is the correct syntax to change the color and size of an element?",
-            "correctAnswer":"System.out.println",
-            "wrong1": "bla",
-            "wrong2":"bla",
-            "wrong3":"bla"
+            "text": "Which image is the correct syntax to change the color and size of an element in-line?",
+            "type":"image",
+            "correctAnswer":"<element style='color:red; size:large'></element",
+            "wrong1": "<change color to red and size to large><>",
+            "wrong2":"<element color=red size =large>",
+            "wrong3":"<color red size large></color red size large>"
         },
         {
             "Question":4,
             "text": "Which language would not be used to create a simple website?",
-            "correctAnswer":"System.out.println",
-            "wrong1": "bla",
-            "wrong2":"bla",
-            "wrong3":"bla"
+            "type":"text",
+            "correctAnswer":"Python",
+            "wrong1": "HTML",
+            "wrong2":"CSS",
+            "wrong3":"JavaScript"
         },
         {
             "Question":5,
+            "type":"image",
             "text": "Which image shows the correct output of the following: <p span style >Hello!<p>",
             "correctAnswer":"System.out.println",
             "wrong1": "bla",
@@ -45,23 +50,26 @@
     "quiz2":[
         {
             "Question":1,
+            "type":"text",
             "text": "How do you print in java?",
-            "correctAnswer":"System.out.println",
-            "wrong1": "bla",
-            "wrong2":"bla",
-            "wrong3":"bla"
+            "correctAnswer":"System.out.println()",
+            "wrong1": "print()",
+            "wrong2":"show()",
+            "wrong3":"log()"
 
         },
         {
             "Question":2,
+            "type":"narrative",
             "text": "Sally wants to code a program that takes in user ids, and then puts them into a line. The first person to join should be the first person out. What java data structure is best used here?",
             "correctAnswer":"queue",
-            "wrong1": "bla",
-            "wrong2":"bla",
-            "wrong3":"bla"  
+            "wrong1": "stack",
+            "wrong2":"both",
+            "wrong3":"neither"  
         },
         {
             "Question":3,
+            "type":"image",
             "text": "Which image correctly shows how to iterate over an array?",
             "correctAnswer":"System.out.println",
             "wrong1": "bla",
@@ -70,14 +78,16 @@
         },
         {
             "Question":4,
+            "type":"text",
             "text": "Which data structure is useful to for collections of fixed lengths?",
-            "correctAnswer":"System.out.println",
-            "wrong1": "bla",
-            "wrong2":"bla",
-            "wrong3":"bla"
+            "correctAnswer":"Array",
+            "wrong1": "LinkedList",
+            "wrong2":"List",
+            "wrong3":"All of these"
         },
         {
             "Question":5,
+            "type":"image",
             "text": "Which image shows the correct way to reverse a string?",
             "correctAnswer":"System.out.println",
             "wrong1": "bla",
