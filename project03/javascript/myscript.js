@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 async function fetchQuizQuestion(quizNo, questionNo) {
     try{
-        const api_endpoint = `https://my-json-server.typicode.com/belha25/project03/quiz${quizNo}.${questionNo}`;
+        const api_endpoint = `https://my-json-server.typicode.com/belha25/project03/${quizNo}`;
         const response = await fetch(api_endpoint);
         const result = await response.json()
         console.log(result);
