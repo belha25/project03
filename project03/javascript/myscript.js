@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 async function fetchQuizQuestion(quizNo, questionNo) {
     try{
-        const api_endpoint = `https://my-json-server.typicode.com/belha25/project03/${quizNo}`;
+        const api_endpoint = `https://my-json-server.typicode.com/belha25/project03/quiz${quizNo}/${questionNo}`;
+        //add id field to json and then do /1
         const response = await fetch(api_endpoint);
         const result = await response.json()
         console.log(result);

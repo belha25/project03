@@ -1,7 +1,7 @@
 {
     "quiz1":[
-
         {
+            "id":1,
             "text": "What is the <p> element used for?",
             "type":"text",
             "correctAnswer":"Creating paragraph elements in HTML",
@@ -11,6 +11,7 @@
 
         },
         {
+            "id":2,
             "text": "Jennifer wants to create a website where she can create a list, remove items, and use colors to display the category the items are in. What languages will she need?",
             "type":"narrative",
             "correctAnswer":"HTML, CSS, and JavaScript",
@@ -19,6 +20,7 @@
             "wrong3":"Python"  
         },
         {
+            "id":3,
             "text": "Which image is the correct syntax to change the color and size of an element in-line?",
             "type":"image",
             "correctAnswer":"<element style='color:red; size:large'></element",
@@ -27,6 +29,7 @@
             "wrong3":"<color red size large></color red size large>"  
         },
         {
+            "id":4,
             "text": "Which language would not be used to create a simple website?",
             "type":"text",
             "correctAnswer":"Python",
@@ -35,6 +38,7 @@
             "wrong3":"JavaScript"
         },
         {
+            "id":5,
             "type":"image",
             "text": "Which image shows the correct output of the following: <p span style >Hello!<p>",
             "correctAnswer":"System.out.println",
@@ -45,6 +49,7 @@
     ],
     "quiz2":[
         {  
+        "id":1,
         "type":"text",
         "text": "How do you print in java?",
         "correctAnswer":"System.out.println()",
@@ -53,6 +58,7 @@
         "wrong3":"log()"
         },
         {
+            "id":2,
             "type":"narrative",
             "text": "Sally wants to code a program that takes in user ids, and then puts them into a line. The first person to join should be the first person out. What java data structure is best used here?",
             "correctAnswer":"queue",
@@ -61,6 +67,7 @@
             "wrong3":"neither"  
         },
         {
+            "id":3,
             "type":"image",
             "text": "Which image correctly shows how to iterate over an array?",
             "correctAnswer":"System.out.println",
@@ -69,6 +76,7 @@
             "wrong3":"bla"
         },
         {
+            "id":4,
             "type":"text",
             "text": "Which data structure is useful to for collections of fixed lengths?",
             "correctAnswer":"Array",
@@ -77,6 +85,7 @@
             "wrong3":"All of these"
         },
         {
+            "id":5,
             "type":"image",
             "text": "Which image shows the correct way to reverse a string?",
             "correctAnswer":"System.out.println",
