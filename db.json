@@ -1,5 +1,6 @@
 {
-    "quiz11":[
+    "quiz1":[
+
         {
             "text": "What is the <p> element used for?",
             "type":"text",
@@ -8,9 +9,7 @@
             "wrong2":"Printing to the console",
             "wrong3":"Storing data about polar bears"
 
-        }
-    ],
-    "quiz12":[
+        },
         {
             "text": "Jennifer wants to create a website where she can create a list, remove items, and use colors to display the category the items are in. What languages will she need?",
             "type":"narrative",
@@ -18,9 +17,7 @@
             "wrong1": "C#",
             "wrong2":"SQL",
             "wrong3":"Python"  
-        }
-    ],
-    "quiz13":[
+        },
         {
             "text": "Which image is the correct syntax to change the color and size of an element in-line?",
             "type":"image",
@@ -28,9 +25,7 @@
             "wrong1": "<change color to red and size to large><>",
             "wrong2":"<element color=red size =large>",
             "wrong3":"<color red size large></color red size large>"  
-        }
-    ],
-    "quiz14":[
+        },
         {
             "text": "Which language would not be used to create a simple website?",
             "type":"text",
@@ -38,9 +33,7 @@
             "wrong1": "HTML",
             "wrong2":"CSS",
             "wrong3":"JavaScript"
-        }
-    ],
-    "quiz15":[
+        },
         {
             "type":"image",
             "text": "Which image shows the correct output of the following: <p span style >Hello!<p>",
@@ -58,9 +51,7 @@
         "wrong1": "print()",
         "wrong2":"show()",
         "wrong3":"log()"
-        }
-    ],
-    "quiz22":[
+        },
         {
             "type":"narrative",
             "text": "Sally wants to code a program that takes in user ids, and then puts them into a line. The first person to join should be the first person out. What java data structure is best used here?",
@@ -68,9 +59,7 @@
             "wrong1": "stack",
             "wrong2":"both",
             "wrong3":"neither"  
-        }
-    ],
-    "quiz23":[
+        },
         {
             "type":"image",
             "text": "Which image correctly shows how to iterate over an array?",
@@ -78,9 +67,7 @@
             "wrong1": "bla",
             "wrong2":"bla",
             "wrong3":"bla"
-        }
-    ],
-    "quiz24":[
+        },
         {
             "type":"text",
             "text": "Which data structure is useful to for collections of fixed lengths?",
@@ -88,9 +75,7 @@
             "wrong1": "LinkedList",
             "wrong2":"List",
             "wrong3":"All of these"
-        }
-    ],
-    "quiz25":[
+        },
         {
             "type":"image",
             "text": "Which image shows the correct way to reverse a string?",
