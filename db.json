@@ -1,7 +1,6 @@
 {
-    "quiz1":[
+    "quiz1question1":[
         {
-            "Question":1,
             "text": "What is the <p> element used for?",
             "type":"text",
             "correctAnswer":"Creating paragraph elements in HTML",
@@ -9,36 +8,40 @@
             "wrong2":"Printing to the console",
             "wrong3":"Storing data about polar bears"
 
-        },
+        }
+    ],
+    "quiz1question2":[
         {
-            "Question":2,
             "text": "Jennifer wants to create a website where she can create a list, remove items, and use colors to display the category the items are in. What languages will she need?",
             "type":"narrative",
             "correctAnswer":"HTML, CSS, and JavaScript",
             "wrong1": "C#",
             "wrong2":"SQL",
             "wrong3":"Python"  
-        },
+        }
+    ],
+    "quiz1question3":[
         {
-            "Question":3,
             "text": "Which image is the correct syntax to change the color and size of an element in-line?",
             "type":"image",
             "correctAnswer":"<element style='color:red; size:large'></element",
             "wrong1": "<change color to red and size to large><>",
             "wrong2":"<element color=red size =large>",
-            "wrong3":"<color red size large></color red size large>"
-        },
+            "wrong3":"<color red size large></color red size large>"  
+        }
+    ],
+    "quiz1question4":[
         {
-            "Question":4,
             "text": "Which language would not be used to create a simple website?",
             "type":"text",
             "correctAnswer":"Python",
             "wrong1": "HTML",
             "wrong2":"CSS",
             "wrong3":"JavaScript"
-        },
+        }
+    ],
+    "quiz1question5":[
         {
-            "Question":5,
             "type":"image",
             "text": "Which image shows the correct output of the following: <p span style >Hello!<p>",
             "correctAnswer":"System.out.println",
@@ -47,46 +50,48 @@
             "wrong3":"bla"
         }
     ],
-    "quiz2":[
+    "quiz2question 1":[
+        {  
+        "type":"text",
+        "text": "How do you print in java?",
+        "correctAnswer":"System.out.println()",
+        "wrong1": "print()",
+        "wrong2":"show()",
+        "wrong3":"log()"
+        }
+    ],
+    "quiz2question 2":[
         {
-            "Question":1,
-            "type":"text",
-            "text": "How do you print in java?",
-            "correctAnswer":"System.out.println()",
-            "wrong1": "print()",
-            "wrong2":"show()",
-            "wrong3":"log()"
-
-        },
-        {
-            "Question":2,
             "type":"narrative",
             "text": "Sally wants to code a program that takes in user ids, and then puts them into a line. The first person to join should be the first person out. What java data structure is best used here?",
             "correctAnswer":"queue",
             "wrong1": "stack",
             "wrong2":"both",
             "wrong3":"neither"  
-        },
+        }
+    ],
+    "quiz2question 3":[
         {
-            "Question":3,
             "type":"image",
             "text": "Which image correctly shows how to iterate over an array?",
             "correctAnswer":"System.out.println",
             "wrong1": "bla",
             "wrong2":"bla",
             "wrong3":"bla"
-        },
+        }
+    ],
+    "quiz2question 4":[
         {
-            "Question":4,
             "type":"text",
             "text": "Which data structure is useful to for collections of fixed lengths?",
             "correctAnswer":"Array",
             "wrong1": "LinkedList",
             "wrong2":"List",
             "wrong3":"All of these"
-        },
+        }
+    ],
+    "quiz2question 5":[
         {
-            "Question":5,
             "type":"image",
             "text": "Which image shows the correct way to reverse a string?",
             "correctAnswer":"System.out.println",

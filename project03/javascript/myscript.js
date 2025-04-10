@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
     document.querySelector('#quiz-selector').onsubmit = function(){
       console.log("submitted")
-      let quizNo = document.getElementsByName("quiz").value
+      var quizChoice = document.querySelector('input[name="quiz"]:checked')
+      let quizNo = quizChoice.value;
       let questionNo = 1
       fetchQuizQuestion(quizNo, questionNo)
+      document.querySelector("#holder").innerHTML="";
       return false;
      
     }
@@ -11,43 +13,54 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 async function fetchQuizQuestion(quizNo, questionNo) {
     try{
-        const api_endpoint = `https://my-json-server.typicode.com/belha25/project03/quiz${quizNo}/${questionNo}`;
+        const api_endpoint = `https://my-json-server.typicode.com/belha25/project03/quiz${quizNo}question${questionNo}`;
         const response = await fetch(api_endpoint);
         const result = await response.json()
         console.log(result);
-        questionDisplay(result, quizNo, questionNo);
+       if(result.type == "text"){
+        textQuestionDisplay(result);
+       }
+       if(result.type=="narrative"){
+        NarrativeQuestionDisplay(result);
+       }
+       if(result.type=="image"){
+        ImageQuestionDisplay(result);
+       }
     }
     catch(err){
         console.error(err);
     }
 }
-function questionDisplay(){
-    //get question no
-    //get type
-    //get text
-    //get answers
-    //display them (create html items?)
-    //create li for each answer
-    //flag answer as correct one
-    //when submitted, pass call to handle question
+function textQuestionDisplay(result){
+        const source = document.getElementById("text-question").innerHTML;
+        const compile = Handlebars.compile(source);
+        document.querySelector("#holder").innerHTML = compile(result);
 }
+function NarrativeQuestionDisplay(){
+    
+}
+function ImageQuestionDisplay(){
 
+}
 function handle_question(e){
-    //get answer
-    //send to scorekeeper
-    //increase question number if question number is not 5
-    if (questionNo <5) {
+  
+    if (questionNo<5) {
         questionNo++
         fetchQuizQuestion(quizNo, questionNo)
     }
+    else{
+        questionNo = 1;
+        endscreen();
+    }
 
 }
+function endscreen(score){
 
+}
 function scorekeeper(answer){
-    var correct
-    var score
-    if (answer = correctAnswer){
+    let correct = 0;
+    if (answer == correctAnswer){
       correct++;  
     }
-    score = correct/5;
+    let score = correct/5;
 }

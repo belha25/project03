@@ -4,13 +4,14 @@
     <script src="javascript/myscript.js"></script>
 </head>
 <body>
-<!--initial view-->
-<div class="jumbotron text-center">
-    <h1>Welcome! Please enter your name, and select which quiz you would like to take</h1>
+<div id="holder">
+    <!--initial view-->
+    <div class="jumbotron text-center">
+        <h1>Welcome! Please enter your name, and select which quiz you would like to take</h1>
 
-</div>
-<div>
-<form id="quiz-selector">
+    </div>
+    <div>
+    <form id="quiz-selector">
         <!--needs a text box, 2 radio buttons, and a submit -->
         <input type="text" id="inputname">
         <label for="inputname">Name</label>
@@ -22,42 +23,46 @@
         <label for="quizchoice2">Quiz Two</label>
         <!--radio 2-->
         <input type="submit">
-</form>
-
-
+    </form>
+    </div>
 </div>
+
 
 </body>
 <!--views-->
-<script id="text-question" type="">
-    <div class="score">
-
-    </div>
-
+<script id="text-question" type="text/x-handlebars-template">
+    <h1 id="number">{{questionNo}}</h1>
     <div class="text-question">
-        <h4 class="question-text">{{text}}</h4>
-        <ul class="answers">
-            <li>
-                <input type="radio" name="answer">{{correctAnswer}}
-                <input type="radio" name="answer">{{wrong1}}
-                <input type="radio" name="answer">{{wrong2}}
-                <input type="radio" name="answer">{{wrong3}}
-            </li>
-            <input type="submit">
+        <h4>{{text}}</h4>
+        <ul>
+            <li><input type="radio" name="answer" value="{{correctAnswer}}"> {{correctAnswer}}</li>
+            <li><input type="radio" name="answer" value="{{wrong1}}"> {{wrong1}}</li>
+            <li><input type="radio" name="answer" value="{{wrong2}}"> {{wrong2}}</li>
+            <li><input type="radio" name="answer" value="{{wrong3}}"> {{wrong3}}</li>
         </ul>
     </div>
 </script>
 
 
-<script id="narrative-question" type="">
+<script id="narrative-question" type="text/x-handlebars-template">
+    <h1 id="number">{{questionNo}}</h1>
     <div class="narrative-question">
-        <h4 class="question-text">{{text}}</h4>
+        <h4>{{text}}</h4>
+        <ul>
+            <li><input type="radio" name="answer" value="{{correctAnswer}}"> {{correctAnswer}}</li>
+            <li><input type="radio" name="answer" value="{{wrong1}}"> {{wrong1}}</li>
+            <li><input type="radio" name="answer" value="{{wrong2}}"> {{wrong2}}</li>
+            <li><input type="radio" name="answer" value="{{wrong3}}"> {{wrong3}}</li>
+        </ul>
     </div>
 </script>
 
 
-<script id="image-question" type="">
+<script id="image-question" type="text/x-handlebars-template">
     <div class="image-question">
         <h4 class="question-text">{{text}}</h4>
     </div>
+</script>
+<script>
+
 </script>
