@@ -106,6 +106,6 @@ function scorekeeper(answer){
     if (answer == correctAnswer){
       correct++;  
     }
-    score = 10*(correct/5);
+    score = 100*(correct/5);
     return score;
 }
