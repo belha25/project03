@@ -1,5 +1,7 @@
 let questionNo = 1
 let quizNo = 1
+let correct = 0
+let correctAnswer = "correctAnswer"
 document.addEventListener('DOMContentLoaded', function(){
     document.querySelector('#quiz-selector').onsubmit = function(){
       console.log("submitted")
@@ -10,8 +12,17 @@ document.addEventListener('DOMContentLoaded', function(){
       return false;
      
     }
-   
-})
+    document.querySelector("#holder").addEventListener("click", function(e){
+        console.log("clicked")
+        if(e.target.id=="submitanswer"){
+            answer = document.querySelector('input[name="answer"]:checked')
+            let currentScore = scorekeeper(answer.value);
+            updateScore(questionNo, currentScore);
+            handle_question();
+        }
+    })
+});
+
 async function fetchQuizQuestion(quizNo, questionNo) {
     try{
         const api_endpoint = `https://my-json-server.typicode.com/belha25/project03/quiz${quizNo}/${questionNo}`;
@@ -19,22 +30,20 @@ async function fetchQuizQuestion(quizNo, questionNo) {
         const result = await response.json()
         console.log(result);
        if(result.type == "text"){
+
         textQuestionDisplay(result);
-        document.querySelector('#submitanswer').onclick=handle_question
-        
+
        }
        if(result.type=="narrative"){
         NarrativeQuestionDisplay(result);
-        document.querySelector('#submitanswer').onclick=handle_question
    
         
        }
        if(result.type=="image"){
         ImageQuestionDisplay(result);
-        document.querySelector('#submitanswer').onsubmit=handle_question
+;
        
        }
-       
     }
     catch(err){
         console.error(err);
@@ -52,29 +61,46 @@ function NarrativeQuestionDisplay(result){
     document.querySelector("#holder").innerHTML = compile(result);
 }
 function ImageQuestionDisplay(result){
+    const source = document.getElementById("image-question").innerHTML;
+    const compile = Handlebars.compile(source);
+    result.quizNo = quizNo;
+    result.questionNo = questionNo;
+    document.querySelector("#holder").innerHTML = compile(result)
 
 }
 function handle_question(e){
-
-  
     if (questionNo<5) {
         document.querySelector("#holder").innerHTML="";
         questionNo++
         fetchQuizQuestion(quizNo, questionNo);
     }
     else{
-        questionNo = 1;
+        questionNo = 0;
         endscreen();
     }
 
 }
+function updateScore(questionNo, score){
+    document.querySelector("#questionsanswered").innerHTML=`<td>${questionNo}</td>`;
+    document.querySelector("#scorenum").innerHTML=`<td>${score}</td>`;
+}
 function endscreen(score){
-
+    document.querySelector("#holder").innerHTML;
+    if (score > .8){
+        const source = document.getElementById("end-screenPASS").innerHTML;
+        const compile = Handlebars.compile(source);
+        document.querySelector("#holder").innerHTML = compile(result);
+    }
+    if (score <.8){
+        const source = document.getElementById("end-screenFAIL").innerHTML;
+        const compile = Handlebars.compile(source);
+        document.querySelector("#holder").innerHTML = compile(result);
+    }
 }
 function scorekeeper(answer){
-    let correct = 0;
     if (answer == correctAnswer){
       correct++;  
     }
-    let score = correct/5;
+    score = correct/5;
+    return score;
 }
