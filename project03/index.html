@@ -1,16 +1,17 @@
 <head>
-    <link href="styling/style.css">
+    <link rel="stylesheet" href="styling/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="javascript/myscript.js"></script>
 </head>
 <body>
 <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-10">
         <div id="holder">
             <!--initial view-->
-            <div class="jumbotron text-center">
+            <div id="announcement">
                 <h1>Welcome! Please enter your name, and select which quiz you would like to take</h1>
-        
             </div>
             <div>
             <form id="quiz-selector">
@@ -29,21 +30,21 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-2">
         <!--questions completed and score-->
         <table>
-            <tr id="queslabel">
+            <th id="queslabel">
                 Questions Answered
-            </tr>
-            <th id="questionsanswered">
-                
             </th>
-            <tr id="scorelabel">
+            <tr id="questionsanswered">
+                
+            </tr>
+            <th id="scorelabel">
                 Score
-            </tr>
-            <th id="scorenum">
-                
             </th>
+            <tr id="scorenum">
+                
+            </tr>
         </table>
     </div>
 </div>
@@ -56,9 +57,8 @@
 <!--views-->
 <script id="text-question" type="text/x-handlebars-template">
 
-    <h1 id="number">{{questionNo}}</h1>
     <div class="text-question">
-        <h4>{{text}}</h4>
+        <h4 class="questiontext">{{text}}</h4>
         <ul>
             <li><input type="radio" name="answer" value="correctAnswer"> {{correctAnswer}}</li>
             <li><input type="radio" name="answer" value="wrong1"> {{wrong1}}</li>
@@ -72,7 +72,7 @@
 
 <script id="narrative-question" type="text/x-handlebars-template">
     <div class="narrative-question">
-        <h4>{{text}}</h4>
+        <h4 class="questiontext">{{text}}</h4>
         <ul>
             <li><input type="radio" name="answer" value="correctAnswer"> {{correctAnswer}}</li>
             <li><input type="radio" name="answer" value="wrong1"> {{wrong1}}</li>
@@ -86,13 +86,27 @@
 
 <script id="image-question" type="text/x-handlebars-template">
     <div class="image-question">
-        <h4 class="question-text">{{text}}</h4>
+        <h4 class="questiontext">{{text}}</h4>
         <ul>
             <li><input type="radio" name="answer" value="correctAnswer"><img src="project03/images/quiz{{quizNo}}question{{questionNo}}/correctAnswer.png"></li>
             <li><input type="radio" name="answer" value = "wrong1"><img src="project03/images/quiz{{quizNo}}question{{questionNo}}/wrongAnswer1.png"></li>
-            <li><input type="radio" name="answer" value="wrong2"><img src="/images/quiz{{quizNo}}question{{questionNo}}/wrongAnswer2.png"></li>
-            <li><input type="radio" name="answer" value = "wrong3"><img src="/images/quiz{{quizNo}}question{{questionNo}}/wrongAnswer3.png"></li>
+            <li><input type="radio" name="answer" value="wrong2"><img src="project03/images/quiz{{quizNo}}question{{questionNo}}/wrongAnswer2.png"></li>
+            <li><input type="radio" name="answer" value = "wrong3"><img src="project03/images/quiz{{quizNo}}question{{questionNo}}/wrongAnswer3.png"></li>
         </ul>
         <input type="submit" id="submitanswer">
+    </div>
+</script>
+
+
+<script id="end-screenPASS" type="text/x-handlebars-template">
+    <div class="end-screenPASS">
+        <h1 class="message">Congratulations, you passed the test with a score of {{score}}!  Click the button to retake the test.</h1>
+        <input type="submit" id="retake">
+    </div>
+</script>
+<script id="end-screenFAIL" type="text/x-handlebars-template">
+    <div class="end-screenFAIL">
+        <h1 class="message">Since your score is {{score}}, you have failed.Study more, and click the button to retake the test.</h1>
+        <input type="submit" id="retake">
     </div>
 </script>

@@ -1,26 +1,37 @@
 form{
-    align-items: center;
-    background-color: black;
+    text-align: center;
+    background-color:green;
 }
-input{
+#inputname{
     background-color: azure;
 }
-
-.test-question{
-
+#quizchoice1{
+    background-color: azure;
 }
-ul.answer-list{
-
+#quizchoice2{
+    background-color: azure;
 }
-
-
-.narrative-question{
-
+#announcement{
+    text-align: center;
+    color: darkgreen;
 }
-.image-question{
-
+.questiontext{
+    border-style: double;
+    border-color: green;
+    text-align: justify;
+    text-decoration-color: beige;
 }
-
-.score{
-
+#holder{
+    background-color: cornsilk;
+    height: 100vh;
+}
+li{
+list-style: none;
+background-color: beige;
+border-color: green;
+border-style: solid;
+text-align: left;
+}
+th{
+    background-color: grey;
 }

@@ -1,6 +1,7 @@
-let questionNo = 1
-let quizNo = 1
-let correct = 0
+let questionNo = 1;
+let quizNo = 1;
+let correct = 0;
+let score=0;
 let correctAnswer = "correctAnswer"
 document.addEventListener('DOMContentLoaded', function(){
     document.querySelector('#quiz-selector').onsubmit = function(){
@@ -19,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function(){
             let currentScore = scorekeeper(answer.value);
             updateScore(questionNo, currentScore);
             handle_question();
+        }
+        if(e.target.id=="retake"){
+            window.location.reload();
         }
     })
 });
@@ -76,7 +80,7 @@ function handle_question(e){
     }
     else{
         questionNo = 0;
-        endscreen();
+        endscreen(score);
     }
 
 }
@@ -85,22 +89,23 @@ function updateScore(questionNo, score){
     document.querySelector("#scorenum").innerHTML=`<td>${score}</td>`;
 }
 function endscreen(score){
+    console.log("Score is" + score)
+    let source = ""
     document.querySelector("#holder").innerHTML;
     if (score > .8){
-        const source = document.getElementById("end-screenPASS").innerHTML;
-        const compile = Handlebars.compile(source);
-        document.querySelector("#holder").innerHTML = compile(result);
+        source = document.getElementById("end-screenPASS").innerHTML;
     }
-    if (score <.8){
-        const source = document.getElementById("end-screenFAIL").innerHTML;
-        const compile = Handlebars.compile(source);
-        document.querySelector("#holder").innerHTML = compile(result);
+    else{
+        source = document.getElementById("end-screenFAIL").innerHTML;
     }
+    const compile = Handlebars.compile(source);
+    document.querySelector("#holder").innerHTML = compile({score});
+
 }
 function scorekeeper(answer){
     if (answer == correctAnswer){
       correct++;  
     }
-    score = correct/5;
+    score = 10*(correct/5);
     return score;
 }
